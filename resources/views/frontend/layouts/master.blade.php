@@ -2,12 +2,14 @@
 	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Themelight</title>
+		<title>Card Grader</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<!-- google fonts -->
 
 		<!-- Css link -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
 		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 		<link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css')}}">
 		<link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css')}}">
@@ -49,9 +51,8 @@
                     <ul id="nav" class="nav navbar-nav menu">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><button type="button" class="btn btn-danger navbar-custom"><a href="{{ route('grade-card.index') }}">Grade Your Card</a></button></li>
-                        <li><a href="#blog">Services</a></li>
-                        <li><a href="#testimonial">About us</a></li>
-                        <li><a href="#contact-form">Contact us</a></li>
+                        <li><a href="{{ route('service') }}">Services</a></li>
+                        <li><a href="{{ route('aboutUs') }}">About us</a></li>
                     </ul>
                 </nav>
 				<!-- /main nav -->

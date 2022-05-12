@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\CardGradeController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +26,10 @@ Auth::routes();
 
 Route::resource('/grade-card', CardGradeController::class);
 
-Route::get('/dashboard', function (){
-    return view('backend.dashboard');
-})->middleware('auth');
+Route::get('/services', [HomeController::class, 'service'])->name('service');
+Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+});
 
