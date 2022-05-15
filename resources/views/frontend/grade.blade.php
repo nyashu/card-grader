@@ -61,9 +61,9 @@
                         </a> --}}
                         @if (isset($data))
                         
-                            <div class="alert alert-success result-alert" role="alert"><span class="text-danger">{{ $data > 5 ? "Well done !" : "Opps !" }}</span> 
-                                <br> <br> <h1>You have got <span class="text-danger">{{ $data }}</span> grade rating.</h1>
-                                <br><img src="{{ $data > 5 ? asset('frontend/img/celebrate.png') : asset('frontend/img/opps.png') }}" alt="">
+                            <div class="alert alert-success result-alert" role="alert"><span class="text-danger">{{ $data >= 5 ? ($data >= 8 ? "Outstanding" : "Well done !") : "Opps !" }}</span> 
+                                <br> <br> <h1>{{ $data >= 8 ? "Awesome you" : "You" }} have got <span class="text-danger">{{ $data }}</span> grade rating.</h1>
+                                <br><img src="{{ $data >= 5 ? asset('frontend/img/celebrate.png') : asset('frontend/img/opps.png') }}" alt="">
                             </div>
                         @else
                         <div class="image-poke"></div>

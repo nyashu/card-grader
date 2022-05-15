@@ -48,6 +48,7 @@ class CardGradeController extends Controller
 
         json_decode($data);
         $data = $data['body'][11];
+        // $data = 5;
 
         if ($customer)
             return view('frontend.grade', compact('data'));
