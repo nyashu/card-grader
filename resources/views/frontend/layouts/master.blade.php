@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Card Grader</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+		<link rel=icon href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15/svgs/solid/rocket.svg>
 		<!-- google fonts -->
 
 		<!-- Css link -->
